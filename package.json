@@ -1,0 +1,23 @@
+{
+  "name": "iai-cytests",
+  "version": "1.0.0",
+  "description": "IAI cytests",
+  "scripts": {
+    "install:env": "npm install",
+    "cy:open": "cypress open --env failOnSnapshotDiff=false",
+    "cy:chromeall": "node_modules\\.bin\\cypress run --browser chrome --spec cypress/e2e/*.js",
+    "cy:layer": "cypress run --env failOnSnapshotDiff=false --spec cypress/e2e/LayerSpec.cy.js",
+    "cy:session": "node_modules\\.bin\\cypress run --env failOnSnapshotDiff=false --spec cypress/e2e/SessionSpec.cy.js",
+    "cy:train": "node_modules\\.bin\\cypress run --env failOnSnapshotDiff=false --spec cypress/e2e/TrainingSpec.cy.js",
+    "cy:realize": "node_modules\\.bin\\cypress run --env failOnSnapshotDiff=false --spec cypress/e2e/RealizingSpec.cy.js",
+    "cy:homepage": "node_modules\\.bin\\cypress run --env failOnSnapshotDiff=false --spec cypress/e2e/HomePageSpec.cy.js",
+    "clear": "node_modules\\.bin\\cypress run --spec cypress/e2e/ClearAllSessions.cy.js",
+    "test": "node_modules\\.bin\\cypress run --env failOnSnapshotDiff=false"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cyframework": "file:cyframework"
+  }
+}
